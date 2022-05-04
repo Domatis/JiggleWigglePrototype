@@ -1,0 +1,820 @@
+fileFormatVersion: 2
+guid: c11da9ed12a9d724d8a37b656aa4ba1f
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 5266969322834263625
+    second: Armature|1H Sword AirAttack
+  - first:
+      74: 1742877875528410784
+    second: Armature|1HSwords Attack1
+  - first:
+      74: 6294437504359260860
+    second: Armature|1HSwords Attack2
+  - first:
+      74: 2799390864633331581
+    second: Armature|1HSwords Attack3
+  - first:
+      74: 1177052078502163537
+    second: Armature|1HSwords Idle
+  - first:
+      74: -8581640267623498870
+    second: Armature|1HSwords Run
+  - first:
+      74: 7556381419738935478
+    second: Armature|1HSwords UltiSkill1
+  - first:
+      74: -7443203308476789284
+    second: Armature|2H Sword AirAttack
+  - first:
+      74: -4424598098979168001
+    second: Armature|2H Sword Attack1
+  - first:
+      74: -1651939280087845115
+    second: Armature|2H Sword Attack2
+  - first:
+      74: 2132860511299679044
+    second: Armature|2H Sword Attack3
+  - first:
+      74: 7072860246368383540
+    second: Armature|2H Sword Idle
+  - first:
+      74: 2757926795100733375
+    second: Armature|2HSwords Run
+  - first:
+      74: 6658852052144933760
+    second: Armature|AirDown
+  - first:
+      74: -7333601984841742074
+    second: Armature|AirUp
+  - first:
+      74: 7588867837991116047
+    second: Armature|Arrow.001Action
+  - first:
+      74: 6450772218158730632
+    second: Armature|ArrowAction
+  - first:
+      74: -824572554060324509
+    second: Armature|Axe AirAttack1
+  - first:
+      74: -1663434391651262352
+    second: Armature|Axe Attack1
+  - first:
+      74: -4442887935399899209
+    second: Armature|Axe Attack2
+  - first:
+      74: 6717537160182448603
+    second: Armature|Axe Attack3
+  - first:
+      74: 7126849197937151798
+    second: Armature|Axe Idle
+  - first:
+      74: -1397415490737010484
+    second: Armature|Axe Run
+  - first:
+      74: -7050344540372402977
+    second: Armature|Bow AirAttack
+  - first:
+      74: -5472218635221722775
+    second: Armature|Bow Attack
+  - first:
+      74: 1411890702340517276
+    second: Armature|Bow Idle
+  - first:
+      74: 3135289604879667711
+    second: Armature|Bow Run
+  - first:
+      74: -9074043398935470182
+    second: Armature|Bow.003Action
+  - first:
+      74: -7627526448505950695
+    second: Armature|BulletAction
+  - first:
+      74: 964717442658236518
+    second: Armature|CrossBow AirAttack
+  - first:
+      74: -8309512345585893735
+    second: Armature|CrossBow Attack
+  - first:
+      74: 7695213787286174605
+    second: Armature|CrossBow Idle
+  - first:
+      74: 3036765407223570567
+    second: Armature|CrossBow Run
+  - first:
+      74: -2568459155626491225
+    second: Armature|Crossbow.003Action
+  - first:
+      74: -2246502780319343731
+    second: Armature|Dash
+  - first:
+      74: -982115091633673366
+    second: Armature|Death
+  - first:
+      74: 1571830204861550811
+    second: Armature|Hanging
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: -78964142871221633
+    second: Armature|Knockback
+  - first:
+      74: 6579631040276577855
+    second: Armature|Pistol AirAttack
+  - first:
+      74: -9062044772170526234
+    second: Armature|Pistol Attack
+  - first:
+      74: -1284975591779128857
+    second: Armature|Pistol Idle
+  - first:
+      74: 56730101710495972
+    second: Armature|Pistol Run
+  - first:
+      74: -534716999168649338
+    second: Armature|Pistol.000Action
+  - first:
+      74: -680586355304220003
+    second: Armature|Rifle AirAttack
+  - first:
+      74: -4967065863770610181
+    second: Armature|Rifle Attack
+  - first:
+      74: -7258582023532428670
+    second: Armature|Rifle Idle
+  - first:
+      74: -2583976570492648783
+    second: Armature|Rifle Run
+  - first:
+      74: -8605390616071553325
+    second: Armature|Rifle.003Action
+  - first:
+      74: -1950661720993009337
+    second: Armature|Shield+Sword AirAttack
+  - first:
+      74: -1136060624013373488
+    second: Armature|Shield+Sword Attack1
+  - first:
+      74: 7458780530930566291
+    second: Armature|Shield+Sword Attack2
+  - first:
+      74: -646854256320946884
+    second: Armature|Shield+Sword Attack3
+  - first:
+      74: 3905650679430304211
+    second: Armature|Shield+Sword Idle
+  - first:
+      74: 8134141961824536374
+    second: Armature|Shield+Sword Run
+  - first:
+      74: 8216145402181528210
+    second: Armature|SlidingWall
+  - first:
+      74: 1982136495307655951
+    second: Armature|Stun
+  - first:
+      74: 8354677232117737857
+    second: Armature|Test
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Armature|1H Sword AirAttack' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|1HSwords Attack2' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|1HSwords Attack3' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|1HSwords Run' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|1HSwords UltiSkill1' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|2H Sword Attack2' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\nClip 'Armature|2H Sword Attack3' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|Axe Attack2' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Axe Attack3' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|Axe Run' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Bow AirAttack' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Bow Attack' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Bow Run' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Shoulder.L' has translation animation that
+      will be discarded.\n\t'Shoulder.R' has translation animation that will be discarded.\n\nClip
+      'Armature|CrossBow AirAttack' has import animation warnings that might lower
+      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
+      quality.\n\t'Shoulder.R' has translation animation that will be discarded.\n\nClip
+      'Armature|CrossBow Attack' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Shoulder.R'
+      has translation animation that will be discarded.\n\nClip 'Armature|CrossBow
+      Run' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Shoulder.L'
+      has translation animation that will be discarded.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|Death' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\t'UpperLeg.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Knockback' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Shoulder.L' has translation animation that
+      will be discarded.\n\nClip 'Armature|Pistol AirAttack' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Pistol Attack' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Pistol Run' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Rifle AirAttack' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|Rifle Attack' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|Rifle Run' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Shield+Sword Run' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|SlidingWall' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder.L' has translation
+      animation that will be discarded.\n\t'Shoulder.R' has translation animation
+      that will be discarded.\n\nClip 'Armature|Stun' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Foot.L' has scale animation that will be
+      discarded.\n\nClip 'Armature|Test' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Shoulder.L' has translation animation that will be
+      discarded.\n\t'Shoulder.R' has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Hanging
+      takeName: Armature|Hanging
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 0
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Main Character(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Main Char
+      parentName: Main Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leather One Piece.001
+      parentName: Main Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Main Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: Armature
+      position: {x: -0.0054712296, y: 0.0031502247, z: 0.95460016}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Spine
+      parentName: Hips
+      position: {x: -4.656613e-10, y: 0.12320936, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 1.0000005}
+    - name: Chest
+      parentName: Spine
+      position: {x: 2.3283064e-10, y: 0.15209639, z: 1.1641532e-10}
+      rotation: {x: -0.020998955, y: -0.000000029802322, z: -0, w: 0.9997795}
+      scale: {x: 1.0000007, y: 1, z: 1.0000006}
+    - name: Neck
+      parentName: Chest
+      position: {x: 5.4047256e-10, y: 0.40584072, z: -0.000000014551915}
+      rotation: {x: 0.016956259, y: -0.0000001480337, z: -0.00000004832803, w: 0.9998563}
+      scale: {x: 1.0000006, y: 0.9999999, z: 1.000001}
+    - name: Head
+      parentName: Neck
+      position: {x: 2.9397995e-10, y: 0.08381886, z: -0.000000015366822}
+      rotation: {x: 0.021308677, y: 0.00000007525186, z: 0.000000041187658, w: 0.999773}
+      scale: {x: 1.0000006, y: 0.9999998, z: 1.0000007}
+    - name: FaceHair
+      parentName: Head
+      position: {x: 0.000000010244548, y: 0.17229083, z: 0.032824993}
+      rotation: {x: -0.01726597, y: 0.00000017280587, z: -0.000000025567168, w: 0.9998509}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Head_end
+      parentName: Head
+      position: {x: -0, y: 0.23911703, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder.L
+      parentName: Chest
+      position: {x: -0.07754705, y: 0.39396054, z: -0.010299173}
+      rotation: {x: 0.012220197, y: -0.017076548, z: 0.81303376, w: 0.5818378}
+      scale: {x: 1, y: 1.0000004, z: 1.0000002}
+    - name: UpperArm.L
+      parentName: Shoulder.L
+      position: {x: 0.0000002009474, y: 0.17689823, z: -0.0000000019888375}
+      rotation: {x: 0.10719472, y: 0.69894403, z: -0.10719151, w: 0.69892526}
+      scale: {x: 0.9999997, y: 1.0000012, z: 0.99999887}
+    - name: LowerArm.L
+      parentName: UpperArm.L
+      position: {x: 0.000000029802322, y: 0.3477806, z: -0.00000012107193}
+      rotation: {x: -0.00006699562, y: 0.0014618635, z: 0.037109524, w: 0.99931014}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000001}
+    - name: Hand.L
+      parentName: LowerArm.L
+      position: {x: -0.000000022351742, y: 0.24699084, z: -0.00000012293458}
+      rotation: {x: 0.019730393, y: 0.00364837, z: 0.022296721, w: 0.9995501}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1}
+    - name: Finger.L
+      parentName: Hand.L
+      position: {x: -0.000000048428774, y: 0.060527705, z: -0.000000037252903}
+      rotation: {x: -0.109359376, y: -0.98656607, z: 0.12118589, w: 0.006477896}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
+    - name: Finger.L_end
+      parentName: Finger.L
+      position: {x: -0, y: 0.055792842, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LArmTarget
+      parentName: Shoulder.L
+      position: {x: -0.09380542, y: 0.5987697, z: -0.34799537}
+      rotation: {x: -0.3856605, y: 0.5926768, z: -0.5926767, w: 0.38566115}
+      scale: {x: 0.999999, y: 1, z: 1.0000002}
+    - name: LArmTarget_end
+      parentName: LArmTarget
+      position: {x: -0, y: 0.12286496, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder.R
+      parentName: Chest
+      position: {x: 0.07754705, y: 0.35692078, z: -0.011855833}
+      rotation: {x: -0.012222184, y: -0.017078096, z: 0.8130335, w: -0.5818381}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000001}
+    - name: UpperArm.R
+      parentName: Shoulder.R
+      position: {x: -0.00000025125337, y: 0.17689806, z: 0.000000008509232}
+      rotation: {x: -0.10719438, y: 0.6989428, z: 0.10719111, w: 0.6989267}
+      scale: {x: 1, y: 1.0000021, z: 0.9999996}
+    - name: LowerArm.R
+      parentName: UpperArm.R
+      position: {x: -0.000000070780516, y: 0.34778047, z: -0.000000029802322}
+      rotation: {x: 0.0013272684, y: -0.035449974, z: 0.037086252, w: 0.99868226}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+    - name: Hand.R
+      parentName: LowerArm.R
+      position: {x: 0.000000057742, y: 0.2469908, z: -0.000000014901161}
+      rotation: {x: -0.018119568, y: -0.005793486, z: 0.023624416, w: 0.9995399}
+      scale: {x: 1.0000011, y: 1.0000005, z: 1.0000001}
+    - name: Finger.R
+      parentName: Hand.R
+      position: {x: -0.000000022351742, y: 0.0605276, z: -0.00000008195639}
+      rotation: {x: -0.11366726, y: -0.98615617, z: -0.11715488, w: 0.029163972}
+      scale: {x: 1.0000004, y: 1.0000011, z: 1.0000004}
+    - name: Finger.R_end
+      parentName: Finger.R
+      position: {x: -0, y: 0.055792842, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RArmTarget
+      parentName: Shoulder.R
+      position: {x: 0.06442411, y: 0.20361502, z: 0.0010120593}
+      rotation: {x: 0.38566184, y: 0.5926777, z: -0.59267586, w: -0.3856598}
+      scale: {x: 0.9999998, y: 1.0000004, z: 1.0000011}
+    - name: RArmTarget_end
+      parentName: RArmTarget
+      position: {x: -0, y: 0.122311234, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperLeg.L
+      parentName: Hips
+      position: {x: -0.1042939, y: -0.009260535, z: -0.028865464}
+      rotation: {x: 0.0031366646, y: 0.035044923, z: 0.9987296, w: 0.036074772}
+      scale: {x: 0.9999778, y: 1.0000097, z: 0.99998486}
+    - name: LowerLeg.L
+      parentName: UpperLeg.L
+      position: {x: -0.000000027939677, y: 0.47494903, z: 0.000000026077032}
+      rotation: {x: -0.04235872, y: 0.70577943, z: -0.04671777, w: 0.70561934}
+      scale: {x: 1.0000005, y: 0.9999977, z: 1}
+    - name: Foot.L
+      parentName: LowerLeg.L
+      position: {x: 0.0000000055879354, y: 0.38809946, z: 0.000000014901161}
+      rotation: {x: 0.029712614, y: -0.0026674864, z: 0.36755228, w: 0.9295243}
+      scale: {x: 0.9999939, y: 0.9999994, z: 0.9999968}
+    - name: Toe.L
+      parentName: Foot.L
+      position: {x: 0.00000004284084, y: 0.077714354, z: -0.000000011175871}
+      rotation: {x: 0.24090096, y: -0.6122601, z: 0.29461303, w: 0.69304216}
+      scale: {x: 1.0000012, y: 1.0000249, z: 0.9999767}
+    - name: Toe.L_end
+      parentName: Toe.L
+      position: {x: -0, y: 0.10043407, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperLeg.R
+      parentName: Hips
+      position: {x: 0.10429391, y: -0.009260535, z: -0.028865453}
+      rotation: {x: 0.006842166, y: 0.035406068, z: 0.998711, w: -0.035721257}
+      scale: {x: 0.99997973, y: 1.0000015, z: 0.99998903}
+    - name: LowerLeg.R
+      parentName: UpperLeg.R
+      position: {x: 0.000000014901161, y: 0.47494912, z: 0.00000009313226}
+      rotation: {x: -0.046963543, y: 0.71559054, z: -0.04208991, w: 0.6956674}
+      scale: {x: 0.99999803, y: 1.0000025, z: 0.9999979}
+    - name: Foot.R
+      parentName: LowerLeg.R
+      position: {x: -0.000000018626451, y: 0.3880996, z: 0.000000014901161}
+      rotation: {x: 0.0012205392, y: -0.0831556, z: 0.368749, w: 0.9258013}
+      scale: {x: 0.99997395, y: 0.9999968, z: 1.0000186}
+    - name: Toe.R
+      parentName: Foot.R
+      position: {x: -0.000000014901161, y: 0.077714376, z: -4.656613e-10}
+      rotation: {x: 0.31495675, y: -0.6366066, z: 0.21406557, w: 0.67060435}
+      scale: {x: 1.0000017, y: 1.0000159, z: 0.99998444}
+    - name: Toe.R_end
+      parentName: Toe.R
+      position: {x: -0, y: 0.10043407, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootIK.L
+      parentName: Armature
+      position: {x: 0.6563647, y: -0.24694553, z: 0.6340679}
+      rotation: {x: 0.00000005960465, y: -0.00000005960465, z: 0.7071068, w: 0.7071068}
+      scale: {x: 0.9999998, y: 0.9999997, z: 1}
+    - name: FootIK.L_end
+      parentName: FootIK.L
+      position: {x: -0, y: 0.1868707, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootIKPole.L
+      parentName: Armature
+      position: {x: 0.70411396, y: -0.15522197, z: 1.0362363}
+      rotation: {x: 0.000000029802322, y: 0.000000059604645, z: -0.70710677, w: 0.7071068}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999999}
+    - name: FootIKPole.L_end
+      parentName: FootIKPole.L
+      position: {x: -0, y: 0.2548417, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootIK.R
+      parentName: Armature
+      position: {x: -0.26432934, y: 0.16437712, z: 0.6599901}
+      rotation: {x: 0.00000005960465, y: -0.00000005960465, z: 0.7071068, w: 0.7071068}
+      scale: {x: 0.9999998, y: 0.9999997, z: 1}
+    - name: FootIK.R_end
+      parentName: FootIK.R
+      position: {x: -0, y: 0.1868707, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootIKPole.R
+      parentName: Armature
+      position: {x: -0.03582084, y: 0.6513507, z: 0.9718658}
+      rotation: {x: 0.000000029802322, y: 0.000000059604645, z: -0.70710677, w: 0.7071068}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999999}
+    - name: FootIKPole.R_end
+      parentName: FootIKPole.R
+      position: {x: -0, y: 0.2548417, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LHandIK
+      parentName: Armature
+      position: {x: 0.6635811, y: -0.11420061, z: 1.4029195}
+      rotation: {x: 0.000000029802322, y: -0.000000059604645, z: 0.70710677, w: 0.7071068}
+      scale: {x: 0.9999999, y: 0.99999976, z: 1}
+    - name: LHandIK_end
+      parentName: LHandIK
+      position: {x: -0, y: 0.10449588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RHandIK
+      parentName: Armature
+      position: {x: -0.8360352, y: 0.13775252, z: 1.8602642}
+      rotation: {x: 0.00000005960465, y: -0.00000005960465, z: 0.7071068, w: 0.7071068}
+      scale: {x: 0.9999998, y: 0.9999997, z: 1}
+    - name: RHandIK_end
+      parentName: RHandIK
+      position: {x: -0, y: 0.1147207, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
