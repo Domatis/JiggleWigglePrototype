@@ -12,10 +12,11 @@ public class ShipController : MonoBehaviour
     [SerializeField] private float speed;
     private Rigidbody rb;
     private Vector3 lastPos;
+    
+    public float shipSpeed => speed;
 
     private void Awake() 
     {
-        
         instance = this;
         rb = GetComponent<Rigidbody>();
     }

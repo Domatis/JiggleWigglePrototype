@@ -7,8 +7,7 @@ using UnityEngine.EventSystems;
 public class TouchScreenController : MonoBehaviour,IPointerDownHandler,IPointerUpHandler,IPointerMoveHandler
 {
     
-    Vector2 downPos;
-
+    private Vector2 downPos;
     private bool pointerDown = false;
 
     // Ekrana basılmasının başlangıcı.

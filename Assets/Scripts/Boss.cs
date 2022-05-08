@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Boss : MonoBehaviour
 {
     public static Boss instance;
@@ -32,20 +33,25 @@ public class Boss : MonoBehaviour
         currentHealth = maxHealth;
 
         // Ship ilerledikçe ilerlemesi ve oyun bittiğinde yapılacaklar için aksiyon kayıtları.
-        ShipController.instance.shipMovementAction += MoveBoss;
-        GameplayManager.instance.GameLoseAction += () => {movingOn = false;};
+        GameplayManager.instance.GameLoseAction += () => 
+        {
+            movingOn = false;
+            rb.velocity = Vector3.zero;
+        };
         
         // Başlangıçta son üretilen yol objesinden daha ileride pozisyon almasının sağlanması.
         List<GameObject> roads = RoadManager.instance.CurrentRoads;
         transform.position = roads[roads.Count-1].transform.position + (Vector3.forward * RoadManager.instance.OffsetPrefabs);
     }
     
-    
-    public void MoveBoss(Vector3 deltaMov)
+
+    private void Update() 
     {
         if(!movingOn) return;
-        transform.position = transform.position + deltaMov;
+        rb.velocity = Vector3.forward * ShipController.instance.shipSpeed;
     }
+    
+
 
     public void TakeDamage(int val)
     {

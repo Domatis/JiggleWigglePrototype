@@ -46,15 +46,18 @@ public class PlayerController : MonoBehaviour
 
         protectionParticle.SetActive(false);
         //Rigidbody kısıtlamalarının set edilmesi.
-        rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+        rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
         
         basePos = transform.position;   //Merkez nokta değerinin başlangıçta alınması.
-        ShipController.instance.shipMovementAction += UpdatePlayerPos;  //Ship hareketiyle beraber player'da ileri doğru hareket edecek.
+
+        ropeHolderObject.transform.position = handPosition.transform.position;
     }
 
     private void Update()
     {
         if(playerDied) return;
+
+        
 
         // Protection süresinin hesaplandığı yer.
         protectionTimer+= Time.deltaTime;
@@ -72,8 +75,7 @@ public class PlayerController : MonoBehaviour
         float xDelta = transform.position.x - basePos.x;
         anim.SetFloat("hangParameter",(xDelta/hangDistance));
 
-
-        ropeHolderObject.transform.position = handPosition.transform.position;   //Rope holder objesinin pozisyonunun güncellenmesi.
+        ropeHolderObject.transform.position = handPosition.transform.position;
     }
 
     private void FixedUpdate() 
@@ -82,10 +84,13 @@ public class PlayerController : MonoBehaviour
         
         //Her zaman merkeze doğru uygulanacak force.
         float xdistance = basePos.x - transform.position.x; //Anlık karakter ile merkez nokta arasında ki farkın bulunması.
-
         rb.AddForce(Mathf.Sign(xdistance) * Vector3.right * centerForce,ForceMode.Acceleration);   //X ekseni için merkez noktaya standart belli force uygulanması.
 
         rb.AddForce(direction * force,ForceMode.Acceleration);   //Kullanıcının uyguladığı force.
+
+        rb.velocity = new Vector3(rb.velocity.x,rb.velocity.y, ShipController.instance.shipSpeed);
+        
+
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -110,14 +115,6 @@ public class PlayerController : MonoBehaviour
     public void SetControlDirection(int xDir)
     {
         direction = Vector3.right * xDir;
-    }
-
-
-    // Ship'in ilerlemesi ile playerin pozisyon güncellenmesi.
-    public void UpdatePlayerPos(Vector3 deltaMovement)
-    {
-        if(playerDied) return;
-        transform.position = transform.position + deltaMovement;
     }
 
     // Protection buff'ının aktive edilmesi.

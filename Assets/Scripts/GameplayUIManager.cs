@@ -8,16 +8,24 @@ public class GameplayUIManager : MonoBehaviour
 
     public static GameplayUIManager instance;
 
-
+    [Header("Control Button Part")]
     [SerializeField] private GameObject controlButtons;
+    [SerializeField] private GameObject controlButtonRightBorder;
+    [SerializeField] private GameObject controlButtonLeftBorder;
+    [SerializeField] private GameObject controlButtonTopBorder;
+    [SerializeField] private GameObject controlButtonBottomBorder;
+    [Header("Control Stick Part")]
     [SerializeField] private GameObject controlStick;
+    [SerializeField] private GameObject controlStickRightBorder;
+    [SerializeField] private GameObject controlStickLeftBorder;
     [SerializeField] private GameObject gameEndPanel;
-    [SerializeField] private float maxDistanceControlStick;
 
     private bool delayOn;
     private int currentDirVal;
 
     private float delayTime,delayTimer;
+    private float controlStickRightOffset,controlStickLeftOffset;
+    private float controlButtonRightOffset,controlButtonLeftOffset,controlButtonBottomOffset,controlButtonTopOffset;
 
     private void Awake() 
     {
@@ -26,6 +34,9 @@ public class GameplayUIManager : MonoBehaviour
 
     private void Start() 
     {
+        controlStickRightOffset = controlStickRightBorder.transform.position.x - transform.position.x;
+        controlStickLeftOffset = controlStickLeftBorder.transform.position.x - transform.position.x;
+
         controlButtons.SetActive(false);
         gameEndPanel.SetActive(false);
     }
@@ -50,7 +61,12 @@ public class GameplayUIManager : MonoBehaviour
     // Control butonlarını aktif edilmesi.
     public void ActivateControls(Vector3 pos)
     {
-        controlButtons.transform.position = pos;
+        float xClamped = Mathf.Clamp(pos.x,controlButtonLeftBorder.transform.position.x,controlButtonRightBorder.transform.position.x);
+        float yClamped = Mathf.Clamp(pos.y,controlButtonBottomBorder.transform.position.y,controlButtonTopBorder.transform.position.y);
+
+        Vector3 newPos = new Vector3(xClamped,yClamped,0);
+
+        controlButtons.transform.position = newPos;
         controlButtons.SetActive(true);
     }
 
@@ -68,8 +84,10 @@ public class GameplayUIManager : MonoBehaviour
         float signVal = Mathf.Sign(xdeltaMovement);     // Oyuncunun ilk ana basış noktasından x ekseni için ne kadar uzaklaştığı ve pozitif, negatif bilgisinin alınması.
         currentDirVal = (int)signVal;       // Sağ taraf ise +1 sol ise -1 bilgisinin alınması.
 
-        float calcDeltaVal = Mathf.Min(maxDistanceControlStick,Mathf.Abs(xdeltaMovement));  //Verilen değerin maksimum değerler içinde kalmasının sağlanması.
-        Vector3 deltaVec = Vector3.right * calcDeltaVal * signVal;      //Toplam offset vektörünün hesaplanması.
+        //Verilen değerin minimum,maksimum değerler içinde kalmasının sağlanması.
+        float calcDeltaVal = Mathf.Clamp(xdeltaMovement,controlStickLeftOffset,controlStickRightOffset);
+
+        Vector3 deltaVec = Vector3.right * calcDeltaVal;      //Toplam offset vektörünün hesaplanması.
 
         controlStick.transform.position = controlButtons.transform.position + deltaVec; // Pozisyon güncellenmesi.
     }

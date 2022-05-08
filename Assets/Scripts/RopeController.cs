@@ -5,20 +5,19 @@ using UnityEngine;
 public class RopeController : MonoBehaviour
 {
     
-    [SerializeField] private GameObject startPoint;     //Başlangıç noktası, gemi için.
-    [SerializeField] private GameObject endPoint;       //Bitiş noktası, oyuncunun tuttuğu yer.
+    [SerializeField] private Rigidbody startPoint;     //Başlangıç noktası, gemi için.
+    [SerializeField] private Rigidbody endPoint;       //Bitiş noktası, oyuncunun tuttuğu yer.
     [SerializeField] private int numberOfNodes = 7;
     [SerializeField] private float nodeColliderRadius = .5f;
 
     [SerializeField] private LineRenderer l_renderer;
 
-    private List<GameObject> nodes = new List<GameObject>();
+    private List<Rigidbody> nodes = new List<Rigidbody>();
 
     private bool nodesPosUpdateOn = true;
 
     private void Start()
     {
-        ShipController.instance.shipMovementAction += MoveNodes;
         GameplayManager.instance.GameLoseAction += OnGameLoseAction;
         l_renderer.transform.position = startPoint.transform.position;  //Renderer objesini başlangıç pozisyonuna sabitlenmesi.
         l_renderer.positionCount = numberOfNodes;
@@ -28,9 +27,20 @@ public class RopeController : MonoBehaviour
 
     private void Update() 
     {
+        SetVelocityOfNodes();
         UpdateLineRenderer();   //Sürekli olarak hinge nesnelerinin
     }
 
+    private void SetVelocityOfNodes()
+    {
+        if(!nodesPosUpdateOn) return;
+        startPoint.velocity = new Vector3(startPoint.velocity.x,startPoint.velocity.y,ShipController.instance.shipSpeed);
+
+        for(int i = 0; i < nodes.Count;i++)
+        {
+            nodes[i].velocity = new Vector3(nodes[i].velocity.x,nodes[i].velocity.y,ShipController.instance.shipSpeed);
+        }
+    }
 
     //Verilen değerlere göre başlangıç ve bitiş noktaları arasında node'ların oluşturulması.
     private void CreateNodes()
@@ -38,11 +48,13 @@ public class RopeController : MonoBehaviour
         Vector3 totalDistance = endPoint.transform.position - startPoint.transform.position;
         Vector3 offset = totalDistance/(numberOfNodes-1);   //Aralık değerinin belirlenmesi.
 
+        startPoint.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
+
         for(int i =0; i < numberOfNodes-2;i++)
         {
             //Node nesnelerinin oluşturulup rigidbody ve hingejoint bileşenlerinin eklenmesi.
             GameObject newNode = new GameObject("Node" + i);
-            newNode.AddComponent<Rigidbody>();
+            Rigidbody rbnewNode = newNode.AddComponent<Rigidbody>();
             CapsuleCollider cldr = newNode.AddComponent<CapsuleCollider>();     //TODO sonra cylindere dönüştürebilir.
 
             cldr.radius = nodeColliderRadius;
@@ -57,13 +69,13 @@ public class RopeController : MonoBehaviour
             // HingeJoint bileşen ayarları.
             if(i == 0)      //İlk nesnenin connected body'si start point olacağından ayrı kontrol ediliyor.
             {
-                hinge.connectedBody = startPoint.GetComponent<Rigidbody>();
+                hinge.connectedBody = startPoint;
                 hinge.anchor = startPoint.transform.position - hinge.transform.position;
             }
             else
             {   
                 //Diğer node'ların connected bodyleri bir önceki obje olacak.
-                hinge.connectedBody = nodes[i-1].GetComponent<Rigidbody>();
+                hinge.connectedBody = nodes[i-1];
                 hinge.anchor = nodes[i-1].transform.position - hinge.transform.position;
             }
 
@@ -75,12 +87,12 @@ public class RopeController : MonoBehaviour
             spring.damper = 100;
             hinge.spring = spring;
 
-            nodes.Add(newNode);
+            nodes.Add(rbnewNode);
         }
 
         //Bitiş noktasının connected body'sinin oluşturulan son node olması.
         HingeJoint endHinge = endPoint.GetComponent<HingeJoint>();
-        endHinge.connectedBody = nodes[nodes.Count-1].GetComponent<Rigidbody>();
+        endHinge.connectedBody = nodes[nodes.Count-1];
         endHinge.anchor = nodes[nodes.Count-1].transform.position - endHinge.transform.position;
 
 
@@ -114,23 +126,6 @@ public class RopeController : MonoBehaviour
         l_renderer.SetPosition(numberOfNodes-1,pos2);
     }
 
-
-    // Uçak gemisinin hareket ettikçe node'larında ona uygun olarak hareket etmesi.
-    public void MoveNodes(Vector3 deltaMov)
-    {
-        if(!nodesPosUpdateOn) return;
-
-        startPoint.transform.position = startPoint.transform.position + deltaMov;
-
-        for(int i = 0; i < nodes.Count;i++)
-        {
-            nodes[i].transform.position = nodes[i].transform.position  + deltaMov;
-            
-        }
-        //Son nokta player tarafından güncelleniyor burda güncellenmesine gerek yok.
-        
-    }
-
     // Oyuncu öldüGameLoscak fonksiyon.
     public void OnGameLoseAction()
     {
@@ -139,17 +134,21 @@ public class RopeController : MonoBehaviour
 
         //Bütün noktaların collider ve rigidbody ayarlarının yapılması, yere düzgün düşmesi için.
         startPoint.GetComponent<CapsuleCollider>().isTrigger = false;
-        Rigidbody startRb = startPoint.GetComponent<Rigidbody>();
-        startRb.useGravity = true;
-        startRb.isKinematic = false;
+        startPoint.velocity = Vector3.zero;
+        startPoint.useGravity = true;
+        startPoint.isKinematic = false;
+        startPoint.constraints = RigidbodyConstraints.None;
+
         endPoint.GetComponent<CapsuleCollider>().isTrigger = false;
-        Rigidbody endpointRb = endPoint.GetComponent<Rigidbody>();
-        endpointRb.useGravity = true;
-        endpointRb.isKinematic = false;
+        
+        endPoint.velocity = Vector3.zero;
+        endPoint.useGravity = true;
+        endPoint.isKinematic = false;
 
         for(int i = 0; i < nodes.Count;i++)
         {
             nodes[i].GetComponent<CapsuleCollider>().isTrigger = false;
+            nodes[i].velocity = Vector3.zero;
         }
 
     }

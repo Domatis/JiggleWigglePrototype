@@ -5,34 +5,45 @@ using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
-    
-    [SerializeField] private CinemachineBrain brain;
     [SerializeField] private CinemachineVirtualCamera mainCam;
     [SerializeField] private CinemachineVirtualCamera gameWinCam;
     private bool camMoveOn = true;
 
+
+    private Rigidbody mainCamrb,winCamRb;
+
+    private void Awake() 
+    {
+        mainCamrb =  mainCam.GetComponent<Rigidbody>();
+        winCamRb = gameWinCam.GetComponent<Rigidbody>();
+    }
+
     private void Start() 
     {
         //Gerekli event kayıtları.
-        ShipController.instance.shipMovementAction += CameraMovement;
         GameplayManager.instance.GameWinAction += GameWinAction;
-        GameplayManager.instance.GameLoseAction += () => {camMoveOn = false;};
+        GameplayManager.instance.GameLoseAction += GameLoseAction;
     }
 
-    //Bütün kameraların ship ile hareketinin sağlandığı fonksiyon.
-    public void CameraMovement(Vector3 deltamov)
+    private void Update() 
     {
         if(!camMoveOn) return;
-        mainCam.transform.position  = mainCam.transform.position + deltamov;
-        gameWinCam.transform.position = gameWinCam.transform.position + deltamov;
+        mainCamrb.velocity = Vector3.forward * ShipController.instance.shipSpeed;
+        winCamRb.velocity = Vector3.forward * ShipController.instance.shipSpeed;
     }
 
-   
      // Oyun kazanılma durumunda gamewin kamerasına geçilmesi.
     public void GameWinAction()
     {
         mainCam.Priority = 0;
         gameWinCam.Priority = 1;
+    }
+
+    public void GameLoseAction()
+    {
+        camMoveOn = false;
+        mainCamrb.velocity = Vector3.zero;
+        winCamRb.velocity = Vector3.zero;
     }
 
 }
